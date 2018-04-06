@@ -6,6 +6,7 @@ import SubmitButton from "./FormElements/SubmitButton";
 import {connect} from "react-redux";
 import {setUserDetails} from "./../actions";
 import {bindActionCreators} from 'redux';
+import {NODE_URL} from './config';
 
 
 class LoginForm extends Component {
@@ -33,7 +34,7 @@ class LoginForm extends Component {
     var self=this;
 
     axios
-      .post(" https://agile-tor-97521.herokuapp.com/users/login", this.state)
+      .post(`${NODE_URL}/users/login`, this.state)
       .then(function(response) {
           self.props.history.push('/add');
           self.props.setUserDetails(response);

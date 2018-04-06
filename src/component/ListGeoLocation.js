@@ -1,7 +1,9 @@
 import React, { Component } from "react";
-
 import { BootstrapTable, TableHeaderColumn } from "react-bootstrap-table";
 import axios from "axios";
+import {NODE_URL} from './config';
+
+
 
 class ListGeoLocation extends Component {
   constructor(props) {
@@ -12,7 +14,7 @@ class ListGeoLocation extends Component {
   }
   componentDidMount() {
     axios
-      .get(" https://agile-tor-97521.herokuapp.com/geolocation/lists")
+      .get(`${NODE_URL}/geolocation/lists`)
       .then(response => {
         let list = [];
         list=response.data.locations.map(res => {

@@ -2,8 +2,9 @@ import React, { Component } from "react";
 import Text from "./FormElements/Text";
 import SubmitButton from "./FormElements/SubmitButton";
 import axios from "axios";
-
 import Password from "./FormElements/Password";
+import {NODE_URL} from './config';
+
 
 class RegisterForm extends Component {
   constructor(props) {
@@ -28,7 +29,7 @@ class RegisterForm extends Component {
   }
   handleSubmit(event) {
     event.preventDefault();
-    axios.post(' https://agile-tor-97521.herokuapp.com/users/register',this.state)
+    axios.post(`${NODE_URL}/users/register`,this.state)
     .then(function(response){
       alert("Registration Success");
     }).catch((err)=>{

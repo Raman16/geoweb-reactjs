@@ -3,6 +3,7 @@ import Text from "./FormElements/Text";
 import SubmitButton from "./FormElements/SubmitButton";
 import axios from "axios";
 import SearchGeoLocation from "./SearchGeoLocation";
+import {NODE_URL} from './config';
 
 
 class CreateGeolocation extends Component {
@@ -39,7 +40,7 @@ class CreateGeolocation extends Component {
   handleSubmit(event) {
     event.preventDefault();
     let data=this.state;
-    axios.post(' https://agile-tor-97521.herokuapp.com/geolocation/add',data)
+    axios.post(`${NODE_URL}/geolocation/add`,data)
     .then(function(response){
       alert("saved")
     }).catch((err)=>{

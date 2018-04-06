@@ -4,6 +4,9 @@ import PlacesAutocomplete, {
   geocodeByAddress,
   getLatLng
 } from "react-places-autocomplete";
+import {NODE_URL} from './config';
+
+
 
 class SearchGeoLocation extends Component {
   constructor(props) {
