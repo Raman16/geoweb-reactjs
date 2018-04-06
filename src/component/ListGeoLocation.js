@@ -12,7 +12,7 @@ class ListGeoLocation extends Component {
   }
   componentDidMount() {
     axios
-      .get("http://localhost:3000/geolocation/lists")
+      .get(" https://agile-tor-97521.herokuapp.com/geolocation/lists")
       .then(response => {
         let list = [];
         list=response.data.locations.map(res => {

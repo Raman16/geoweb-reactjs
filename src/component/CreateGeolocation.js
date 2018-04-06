@@ -39,7 +39,7 @@ class CreateGeolocation extends Component {
   handleSubmit(event) {
     event.preventDefault();
     let data=this.state;
-    axios.post('http://localhost:5030/geolocation/add',data)
+    axios.post(' https://agile-tor-97521.herokuapp.com/geolocation/add',data)
     .then(function(response){
       alert("saved")
     }).catch((err)=>{
