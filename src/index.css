@@ -1,0 +1,20 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+.geosuggest__suggests--hidden {
+  max-height: 0;
+  overflow: hidden;
+  border-width: 0;
+}
+.geosuggest__item--active {
+  background: #267dc0;
+  color: #fff;
+}
+
+div#PlacesAutocomplete__root {
+  width: 345px !important;
+  z-index: 9999;
+  position: absolute;
+}
